@@ -7,12 +7,12 @@ idempotent consumption, retry/DLQ handling, schema compatibility
 checking, lag and imbalance monitoring, and backpressure — run against a
 real local Kafka broker, not mocked or simulated in-process.
 
-I do have real production Kafka experience (diagnosing and fixing a
-consumer group's uneven partition distribution, cutting broker CPU from
-roughly 80% to 16%). This project is an independently built lab that
-generalizes that experience into a reproducible demonstration — the
-specific data and numbers here are from this lab, not a re-creation of
-the original incident.
+I do have real production Kafka experience on AWS MSK: after the cluster
+grew from 2 to 6 brokers, nearly all partition leaders (268 of 272) were
+still on the two original brokers, and I rebalanced them. This project is
+an independently built lab that generalizes that experience into a
+reproducible demonstration. The specific data and numbers here are from this
+lab, not a re-creation of the original incident.
 
 ## What was built
 
