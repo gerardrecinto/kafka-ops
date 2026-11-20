@@ -9,12 +9,13 @@ real local Kafka broker (KRaft mode), Postgres, and Redis via Docker, not
 mocked.
 
 **Honesty note**: I have hands-on Kafka experience from a real production
-incident (diagnosing and fixing a consumer group's uneven partition
-distribution, cutting broker CPU from ~80% to ~16%). This project is an
-independently built portfolio piece that generalizes that experience into
-a reusable, reproducible lab — it does not reuse or expose anything about
-the original production system, and the specific numbers in this repo's
-"Observed results" below are from this lab, not that incident.
+incident on AWS MSK. After the cluster grew from 2 to 6 brokers, nearly all
+partition leaders (268 of 272) were still on the two original brokers, and I
+rebalanced them. This project is an independently built portfolio piece that
+generalizes that experience into a reusable, reproducible lab. It does not
+reuse or expose anything about the original production system, and the
+numbers in this repo's "Observed results" below are from this lab, not that
+incident.
 
 ## Architecture
 
