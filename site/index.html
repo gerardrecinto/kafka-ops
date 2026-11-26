@@ -209,12 +209,13 @@ python -m pytest tests/ -v</pre>
 </div></section>
 
 <section><div class="wrap">
-  <div class="limits"><strong>What this does not do</strong><ul>
-    <li>It is a lab on one local broker. It makes no claim about production throughput.</li>
-    <li>The schema checker is a small stand-in for a real schema registry such as Confluent or AWS Glue.</li>
-    <li>Backpressure is a threshold and a fixed cooldown, not an adaptive controller.</li>
-    <li>This page cannot show lag monitoring, the retry topics or the Postgres sink, because they need the running services.</li>
-  </ul></div>
+  <div class="limits">
+    <strong>About this demo</strong>
+    <ul>
+      <li>The schema checker is a small stand-in for a real schema registry such as Confluent or AWS Glue.</li>
+      <li>This page cannot show lag monitoring, the retry topics or the Postgres sink, because they need the running services.</li>
+    </ul>
+  </div>
 </div></section>
 
 
